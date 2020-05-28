@@ -1,9 +1,9 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn=1,vmem=8g,walltime=00:30:00
+#PBS -l nodes=1:ppn=1,vmem=12g,walltime=00:30:00
 #PBS -N app-fmri-2-mat
 #PBS -V
 
 set -e
 set -x
 
-time singularity exec -e docker://faskowit/app-bold-time-series ./run.sh
+time singularity exec -e docker://faskowit/app-bold-time-series:brnch-0.1.2 ./run.sh
