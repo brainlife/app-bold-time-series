@@ -137,7 +137,10 @@ if [[ ! -f ${outTS} ]] ; then
 	exit 1
 else
 	# rename
-	mv ${outTS} ${inOUTBASE}/output_ts/out_timeseries.hdf5
+	mv ${outTS} ${inOUTBASE}/output_ts/timeseries.hdf5
+	# and copy over the key and label.json for future matrix making
+	cp `jq -r '.key' config.json` ${inOUTBASE}/output_ts/key.txt
+	cp `jq -r '.label' config.json` ${inOUTBASE}/output_ts/label.json
 fi
 
 # end run.sh
