@@ -65,12 +65,20 @@ if [[ ${inTR} = "null" ]] ; then
 
 	if [[ -f ${blJson} ]] ; then
 		getTr=$(jq -r '.meta.RepetitionTime' ${blJson})
-		if [[ ${getTr} != "null" ]] && [[ ! -z ${getTr} ]] ; then
+		if [[ ${getTr} != "null" ]] ; then
 			inTR=${getTr}
 		fi
 	else
 		echo "blJson not found, not reading TR from here"
 	fi
+fi
+
+# make sure inTR is not ''
+if [[ -z ${inTR} ]] ; then
+	echo "DETECTED that 'inTR' was ''... will try to guess TR... \
+		  this might cause problems... so Im telling you. \
+		  Please provide TR for no problems!!!"
+	inTR="null"
 fi
 
 ###############################################################################
