@@ -65,7 +65,7 @@ if [[ ${inTR} = "null" ]] ; then
 
 	if [[ -f ${blJson} ]] ; then
 		getTr=$(jq -r '.meta.RepetitionTime' ${blJson})
-		if [[ ${getTr} != "null" ]] ; then
+		if [[ ${getTr} != "null" ]] && [[ ! -z ${getTr} ]] ; then
 			inTR=${getTr}
 		fi
 	else
