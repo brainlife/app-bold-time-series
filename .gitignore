@@ -130,3 +130,4 @@ dmypy.json
 #joshadd
 config.json
 test*/*
+output*/*

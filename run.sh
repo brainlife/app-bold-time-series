@@ -131,7 +131,7 @@ cmd="${py_bin} ${EXEDIR}/src/makemat.py \
 echo $cmd
 eval $cmd
 
-outTS=${inOUTBASE}/output_ts/out_${inPARC}_timeseries.hdf5
+outTS=$(ls ${inOUTBASE}/output_ts/out_*_timeseries.hdf5)
 if [[ ! -f ${outTS} ]] ; then
 	echo "ERROR: something wrong with making TS" >&2; 
 	exit 1
