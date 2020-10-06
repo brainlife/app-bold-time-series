@@ -1,5 +1,5 @@
 [![Abcdspec-compliant](https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg)](https://github.com/brain-life/abcd-spec)
-[![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-brainlife.app.385-blue.svg)](https://doi.org/https://doi.org/10.25663/brainlife.app.385)
+[![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-brainlife.app.385-blue.svg)](https://doi.org/10.25663/brainlife.app.369)
 
 # app-bold-time-series
 An app to get nuisance regressed time series from a preprocessed bold, confounds, and a parc. Before running this app, you need to have run fMRIPrep. The outputs of this app will be average bold magnitudes in each volume of your input parcellation. Such data can then be used to construct networks. 
